@@ -10,7 +10,7 @@ export const myProjects = [
       "Implemented dynamic menu browsing and seamless order flow.",
       "Integrated authentication and state management for secure and smooth interactions",
     ],
-    href: "",
+    href: "https://madhuban-fullstack.vercel.app/",
     logo: "",
     image: "/assets/projects/madhubaan.png",
     tags: [
@@ -29,7 +29,26 @@ export const myProjects = [
         name: "TailwindCSS",
         path: "/assets/logos/tailwindcss.svg",
       },
-    
+      {
+        id: 4,
+        name: "Node.js",
+        path: "",
+      },
+      {
+        id: 5,
+        name: "Express.js",
+        path: "",
+      },
+      {
+        id: 6,
+        name: "Supabase",
+        path: "",
+      },
+      {
+        id: 7,
+        name: "REST APIs",
+        path: "",
+      },
     ],
   },
   {

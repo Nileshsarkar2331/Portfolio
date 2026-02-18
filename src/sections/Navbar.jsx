@@ -1,8 +1,23 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+
+const resumeFileName = "Nilesh_RESUME..pdf";
+const resumeFilePath = `${import.meta.env.BASE_URL}assets/${resumeFileName}`;
+
+function handleResumeDownload(event) {
+  event.preventDefault();
+
+  const link = document.createElement("a");
+  link.href = resumeFilePath;
+  link.download = resumeFileName;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
 function Navigation() {
   return (
-      <ul className="nav-ul">
+    <ul className="nav-ul">
       <li className="nav-li">
         <a className="nav-link" href="/#home">
           Home
@@ -26,8 +41,9 @@ function Navigation() {
       <li className="nav-li">
         <a
           className="nav-link"
-          href="/assets/NILESH_RESUME.pdf"
-          download="NILESH_RESUME.pdf"
+          href={resumeFilePath}
+          download={resumeFileName}
+          onClick={handleResumeDownload}
         >
           Resume
         </a>
