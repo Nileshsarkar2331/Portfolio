@@ -11,6 +11,14 @@ const EMAILJS_PUBLIC_KEY =
   import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "pn-Bw_mS1_QQdofuV";
 const CONTACT_RECEIVER_EMAIL = "nilesh2331sarkar@gmail.com";
 
+const openMailtoFallback = ({ name, email, message }) => {
+  const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+  const body = encodeURIComponent(
+    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+  );
+  window.location.href = `mailto:${CONTACT_RECEIVER_EMAIL}?subject=${subject}&body=${body}`;
+};
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -55,7 +63,18 @@ const Contact = () => {
     } catch (error) {
       setIsLoading(false);
       console.error(error);
-      showAlertMessage("danger", "Something went wrong!");
+      const statusText =
+        error && typeof error === "object"
+          ? `${error.status || ""} ${error.text || ""}`.trim()
+          : "";
+
+      openMailtoFallback(formData);
+      showAlertMessage(
+        "danger",
+        statusText
+          ? `Auto-send failed (${statusText}). Your email app has been opened as fallback.`
+          : "Auto-send failed. Your email app has been opened as fallback."
+      );
     }
   };
   return (
