@@ -125,6 +125,53 @@ export const myProjects = [
       },
     ],
   },
+  {
+    id: 4,
+    title: "BookNook",
+    description:
+      "BookNook is a full-stack used-book marketplace where users can browse listings, buy books, and sell their own books with a smooth end-to-end experience.",
+    subDescription: [
+      "Built a modern marketplace app with React, TypeScript, and Tailwind CSS for a responsive shopping flow.",
+      "Implemented secure sign-in and protected account experiences with auth-enabled user journeys.",
+      "Developed backend services with Node.js and Express for listings, cart, checkout, and order processing.",
+      "Added admin capabilities for listing moderation, price updates, and user/order monitoring.",
+    ],
+    href: "",
+    logo: "",
+    image: "/assets/projects/booknook.png",
+    tags: [
+      {
+        id: 1,
+        name: "React",
+        path: "/assets/logos/react.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.webp",
+      },
+      {
+        id: 3,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 4,
+        name: "Node.js",
+        path: "",
+      },
+      {
+        id: 5,
+        name: "Express.js",
+        path: "",
+      },
+      {
+        id: 6,
+        name: "MongoDB",
+        path: "",
+      },
+    ],
+  },
   
 ];
 

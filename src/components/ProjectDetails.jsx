@@ -31,7 +31,7 @@ const ProjectDetails = ({
             </p>
           ))}
           <div className="flex items-center justify-between mt-4">
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               {tags.map((tag) =>
                 tag.path ? (
                   <img

@@ -95,7 +95,7 @@ const About = () => {
               Do you want to start a project together?
             </p>
             <a
-              href="mailto:nileshsarkar430@gmail.com"
+              href="mailto:nilesh2331sarkar@gmail.com"
               className="px-8 py-3 rounded-full font-semibold text-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-lg text-white transition-all duration-300 hover:scale-105 hover:from-indigo-600 hover:to-pink-600 focus:outline-none focus:ring-4 focus:ring-indigo-300"
             >
               🚀 Start a Project
